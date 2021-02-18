@@ -5,6 +5,7 @@
         <h1 class="title">Cadastro</h1>
 
         <form action="{{ url_for('signup') }}" method="POST">
+            {{ form.csrf_token }}
             <fieldset class="form-field">
                 {{ form.email.label }}
                 {{ form.email }}

@@ -5,6 +5,8 @@
         <h1 class="title">Contato</h1>
 
         <form action="{{ url_for('contact') }}" method="POST">
+            {{ form.csrf_token }}
+            
             <fieldset class="form-field">
                 {{ form.name.label }}
                 {{ form.name(size=20) }}
